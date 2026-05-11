@@ -10,7 +10,7 @@ const timeline = [
     type: "edu",
     title: "B.Sc. Computer Science & Engineering",
     org: "Jagannath University, Dhaka",
-    period: "2019 – 2023",
+    period: "2019 – 2025",
     detail:
       "Algorithms, data structures, distributed systems, and software engineering fundamentals.",
   },

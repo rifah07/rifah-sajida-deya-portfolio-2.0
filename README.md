@@ -2,7 +2,7 @@
 
 Personal portfolio website built with Next.js 15, TypeScript, Tailwind CSS v4, and Framer Motion.
 
-🌐 **Live:** [your-domain.vercel.app](https://your-domain.vercel.app)
+🌐 **Live:** [rifah-sajida-deya-portfolio-2-0.vercel.app](https://rifah-sajida-deya-portfolio-2-0.vercel.app/)
 
 ---
 
@@ -26,7 +26,7 @@ Personal portfolio website built with Next.js 15, TypeScript, Tailwind CSS v4, a
 ```bash
 # 1. Clone the repo
 git clone https://github.com/rifah07/rifah-sajida-deya-portfolio-2.0.git
-cd portfolio
+cd rifah-sajida-deya-portfolio-2.0
 
 # 2. Install dependencies
 npm install

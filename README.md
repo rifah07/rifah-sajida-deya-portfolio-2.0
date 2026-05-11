@@ -2,7 +2,7 @@
 
 Personal portfolio website built with Next.js 15, TypeScript, Tailwind CSS v4, and Framer Motion.
 
-🌐 **Live:** [rifah-sajida-deya-portfolio-2-0.vercel.app](https://rifah-sajida-deya-portfolio-2-0.vercel.app/)
+🌐 **Live:** [rifah-sajida-deya-portfolio-2-0.vercel.app](https://rifah-sajida-deya-portfolio.vercel.app/)
 
 ---
 

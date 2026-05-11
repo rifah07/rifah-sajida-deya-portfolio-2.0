@@ -61,7 +61,7 @@ export const projects: Project[] = [
     github: {
       frontend: "https://github.com/rifah07/shopsphere-frontend",
       backend:
-        "https://github.com/rifah07/ShopSphere__A-Complete-World-for,-Shopping__Backend",
+        "https://github.com/rifah07/ShopSphere__A-Complete-World-for-Shopping__Backend",
     },
     live: {
       frontend: "https://shopsphere-complete-world-for-shopping.lovable.app/",

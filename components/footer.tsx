@@ -5,10 +5,10 @@ const socials = [
   { icon: GithubIcon, href: "https://github.com/rifah07", label: "GitHub" },
   {
     icon: LinkedInIcon,
-    href: "https://linkedin.com/in/rifah-sajida-deya",
+    href: "https://www.linkedin.com/in/rifah-sajida-deya-1011/",
     label: "LinkedIn",
   },
-  { icon: Mail, href: "mailto:rifah.dev@gmail.com", label: "Email" },
+  { icon: Mail, href: "mailto:rifahsajida7@gmail.com", label: "Email" },
 ];
 
 export default function Footer() {

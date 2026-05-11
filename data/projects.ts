@@ -15,12 +15,12 @@ export const projects: Project[] = [
       "Order state machine with controlled transitions",
     ],
     github: {
-      frontend: "https://github.com/rifah07/mini-ecommerce-frontend",
-      backend: "https://github.com/rifah07/mini-ecommerce-nestjs",
+      frontend: "https://github.com/rifah07/mini_ecommerce_frontend",
+      backend: "https://github.com/rifah07/mini_ecommerce_nestjs",
     },
     live: {
       frontend: "https://mini-ecommerce-frontend-sandy.vercel.app/",
-      backend: "https://mini-ecommerce-nestjs.onrender.com",
+      backend: "https://mini-ecommerce-nestjs.onrender.com/api/docs/",
     },
     category: "Full Stack",
     featured: true,
@@ -144,9 +144,11 @@ export const projects: Project[] = [
       "Full REST API: expenses, budgets, breakdowns by day/week/month",
       "React dashboard with doughnut chart, budget progress bar, and expense filters",
     ],
-      github: {
-      frontend: "https://github.com/rifah07/expense-tracker-telegram-bot-frontend",
-      backend: "https://github.com/rifah07/expense-tracker-telegram-bot-backend",
+    github: {
+      frontend:
+        "https://github.com/rifah07/expense-tracker-telegram-bot-frontend",
+      backend:
+        "https://github.com/rifah07/expense-tracker-telegram-bot-backend",
     },
     live: {
       frontend: "https://expense-tracker-telegram-bot-fronte.vercel.app/",

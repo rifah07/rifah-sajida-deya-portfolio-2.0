@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { ExternalLink, CheckCircle2 } from "lucide-react";
-import { GithubIcon } from "./icons";
+import { GithubIcon as Github } from "@/components/ui/icons";
 import { Project } from "@/types/project";
 import { cn } from "@/lib/utils";
 
@@ -113,6 +113,7 @@ export function ProjectCard({
 
         {/* Links */}
         <div className="flex flex-wrap gap-1 pt-3 border-t border-[hsl(var(--border)/0.5)]">
+          {/* GitHub links */}
           {project.github.frontend && (
             <a
               href={project.github.frontend}
@@ -120,7 +121,7 @@ export function ProjectCard({
               rel="noopener noreferrer"
               className="flex items-center gap-1.5 text-xs text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--foreground))] px-2.5 py-1.5 rounded-md hover:bg-[hsl(var(--muted))] transition-colors"
             >
-              <GithubIcon size={12} /> Frontend
+              <Github size={12} /> Frontend
             </a>
           )}
           {project.github.backend && (
@@ -130,19 +131,33 @@ export function ProjectCard({
               rel="noopener noreferrer"
               className="flex items-center gap-1.5 text-xs text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--foreground))] px-2.5 py-1.5 rounded-md hover:bg-[hsl(var(--muted))] transition-colors"
             >
-              <GithubIcon size={12} /> Backend
+              <Github size={12} /> Backend
             </a>
           )}
-          {(project.live.frontend || project.live.backend) && (
-            <a
-              href={project.live.frontend || project.live.backend}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-xs text-[hsl(var(--accent))] hover:text-[hsl(var(--accent)/0.8)] px-2.5 py-1.5 rounded-md hover:bg-[hsl(var(--accent)/0.1)] transition-colors ml-auto"
-            >
-              <ExternalLink size={11} /> Live
-            </a>
-          )}
+
+          {/* Live links */}
+          <div className="flex gap-1 ml-auto">
+            {project.live.frontend && (
+              <a
+                href={project.live.frontend}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 text-xs text-[hsl(var(--accent))] hover:text-[hsl(var(--accent)/0.8)] px-2.5 py-1.5 rounded-md hover:bg-[hsl(var(--accent)/0.1)] transition-colors"
+              >
+                <ExternalLink size={11} /> Frontend
+              </a>
+            )}
+            {project.live.backend && (
+              <a
+                href={project.live.backend}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 text-xs text-[hsl(var(--accent))] hover:text-[hsl(var(--accent)/0.8)] px-2.5 py-1.5 rounded-md hover:bg-[hsl(var(--accent)/0.1)] transition-colors"
+              >
+                <ExternalLink size={11} /> Backend
+              </a>
+            )}
+          </div>
         </div>
       </div>
     </motion.article>

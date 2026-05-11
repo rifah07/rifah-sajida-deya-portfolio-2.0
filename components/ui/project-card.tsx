@@ -9,13 +9,10 @@ import { Project } from "@/types/project";
 import { cn } from "@/lib/utils";
 
 const catColor: Record<string, string> = {
-  "Full Stack":
-    "bg-[hsl(var(--primary)/0.12)] text-[hsl(var(--primary))] border-[hsl(var(--primary)/0.25)]",
-  Backend:
-    "bg-[hsl(var(--accent)/0.12)] text-[hsl(var(--accent))] border-[hsl(var(--accent)/0.25)]",
-  IoT: "bg-[hsl(var(--muted))] text-[hsl(var(--muted-foreground))] border-[hsl(var(--border))]",
+  "Full Stack": "bg-[hsl(220_70%_50%)] text-white border-transparent",
+  Backend: "bg-[hsl(168_60%_38%)] text-white border-transparent",
+  //IoT: "bg-[hsl(220_10%_30%)] text-white border-transparent",
 };
-
 export function ProjectCard({
   project,
   index,

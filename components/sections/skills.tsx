@@ -7,67 +7,35 @@ const groups = [
   {
     cat: "Languages",
     color: "primary",
-    skills: [
-      { n: "TypeScript", v: 90 },
-      { n: "JavaScript", v: 88 },
-      { n: "Ruby", v: 80 },
-      { n: "C++", v: 75 },
-      { n: "Python", v: 70 },
-    ],
+    skills: ["TypeScript", "JavaScript", "Ruby", "C++", "Python"],
   },
   {
     cat: "Backend",
     color: "accent",
-    skills: [
-      { n: "Node.js", v: 90 },
-      { n: "NestJS", v: 85 },
-      { n: "Express.js", v: 88 },
-    ],
+    skills: ["Node.js", "NestJS", "Express.js"],
   },
   {
     cat: "Database",
     color: "primary",
-    skills: [
-      { n: "PostgreSQL", v: 82 },
-      { n: "MySQL", v: 80 },
-      { n: "MongoDB", v: 85 },
-      { n: "Prisma/TypeORM", v: 82 },
-    ],
+    skills: ["PostgreSQL", "MySQL", "MongoDB", "Prisma / TypeORM"],
   },
   {
     cat: "Frontend",
     color: "accent",
-    skills: [
-      { n: "React", v: 75 },
-      { n: "Next.js", v: 72 },
-      { n: "Tailwind CSS", v: 80 },
-    ],
+    skills: ["React", "Next.js", "Tailwind CSS"],
   },
   {
     cat: "Auth & Security",
     color: "primary",
-    skills: [
-      { n: "JWT ", v: 85 },
-      { n: "HTTP-only Cookies", v: 82 },
-      { n: "RBAC", v: 80 },
-    ],
+    skills: ["JWT", "HTTP-only Cookies", "RBAC"],
   },
   {
     cat: "Tools & DevOps",
     color: "accent",
-    skills: [
-      { n: "Git / GitHub", v: 88 },
-      { n: "Vercel", v: 80 },
-      { n: "Render", v: 80 },
-      { n: "REST Design", v: 90 },
-    ],
+    skills: ["Git / GitHub", "Vercel", "Render", "REST Design"],
   },
 ];
 
-const bar: Record<string, string> = {
-  primary: "bg-[hsl(var(--primary))]",
-  accent: "bg-[hsl(var(--accent))]",
-};
 const dot: Record<string, string> = {
   primary: "bg-[hsl(var(--primary))]",
   accent: "bg-[hsl(var(--accent))]",
@@ -107,36 +75,20 @@ export default function Skills() {
                   {g.cat}
                 </span>
               </div>
-              <div className="space-y-3">
-                {g.skills.map((s, si) => (
-                  <div key={s.n}>
-                    <div className="flex justify-between mb-1">
-                      <span className="text-sm text-[hsl(var(--foreground))] font-medium">
-                        {s.n}
-                      </span>
-                      <span className="font-mono text-[10px] text-[hsl(var(--muted-foreground))]">
-                        {s.v}%
-                      </span>
-                    </div>
-                    <div className="h-1 bg-[hsl(var(--muted))] rounded-full overflow-hidden">
-                      <motion.div
-                        className={`h-full ${bar[g.color]} rounded-full`}
-                        initial={{ width: 0 }}
-                        whileInView={{ width: `${s.v}%` }}
-                        viewport={{ once: true }}
-                        transition={{
-                          delay: gi * 0.08 + si * 0.05 + 0.3,
-                          duration: 0.7,
-                          ease: "easeOut",
-                        }}
-                      />
-                    </div>
-                  </div>
+              <div className="flex flex-wrap gap-2">
+                {g.skills.map((skill) => (
+                  <span
+                    key={skill}
+                    className="text-sm px-3 py-1.5 rounded-lg bg-[hsl(var(--muted))] text-[hsl(var(--foreground))] border border-[hsl(var(--border)/0.5)] font-medium"
+                  >
+                    {skill}
+                  </span>
                 ))}
               </div>
             </motion.div>
           ))}
         </div>
+
         <div className="mt-8 flex flex-wrap gap-2">
           {[
             "REST API",

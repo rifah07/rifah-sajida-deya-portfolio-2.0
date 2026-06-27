@@ -96,7 +96,7 @@ export default function Hero() {
               <FolderOpen size={15} /> View Projects
             </button>
             <a
-              href="/Rifah_Sajida_Deya_js.pdf"
+              href="/Rifah_Sajida_Deya_cv.pdf"
               download
               className="inline-flex items-center gap-2 h-11 px-6 rounded-lg border border-[hsl(var(--border))] bg-transparent text-[hsl(var(--foreground))] text-sm font-medium hover:bg-[hsl(var(--muted))] transition-colors"
             >

@@ -64,7 +64,7 @@ export default function Resume() {
               </a>
             </div>
             <p className="mt-5 text-xs text-[hsl(var(--muted-foreground))] font-mono">
-              PDF · Updated May 2026
+              PDF · Updated June 2026
             </p>
           </div>
 

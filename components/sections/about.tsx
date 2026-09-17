@@ -38,25 +38,37 @@ export default function About() {
           />
           <div className="space-y-4 text-[hsl(var(--muted-foreground))] leading-relaxed">
             <p>
-              My work centers on building{" "}
+              I&apos;m currently a{" "}
               <span className="text-[hsl(var(--foreground))] font-semibold">
-                reliable, well-structured APIs
-              </span>{" "}
-              and backend systems that handle real-world edge cases: concurrent
-              requests, transactional consistency, auth vulnerabilities, and
-              graceful failures.
-            </p>
-            <p>
-              I care about code that&apos;s easy to reason about - clean
-              separation of concerns, explicit over implicit, and systems a
-              future engineer can maintain without archaeology.
-            </p>
-            <p>
-              Currently deepening expertise in{" "}
-              <span className="text-[hsl(var(--foreground))] font-semibold">
-                distributed systems
+                Full-Stack Engineer Intern at Periscale AI
               </span>
-              , system design patterns, and cloud-native deployment.
+              , an AI-powered e-commerce SaaS platform built for South Asian
+              commerce. My work spans four codebases in production - a Django
+              REST backend, a React/TypeScript frontend, a FastAPI + LangGraph
+              AI agent service, and a separate Hono/TypeScript backend for a
+              field-service platform.
+            </p>
+            <p>
+              I&apos;ve worked across the full stack: rebuilding{" "}
+              <span className="text-[hsl(var(--foreground))] font-semibold">
+                core order operations
+              </span>{" "}
+              (role-based boards, kanban, invoice lifecycle), shipping
+              end-to-end{" "}
+              <span className="text-[hsl(var(--foreground))] font-semibold">
+                courier and social channel integrations
+              </span>{" "}
+              and contributing to{" "}
+              <span className="text-[hsl(var(--foreground))] font-semibold">
+                AI features
+              </span>{" "}
+              - including an AI-powered order creation flow, a multilingual
+              LangGraph chatbot runtime, and LLM cache resilience.
+            </p>
+            <p>
+              Outside of Periscale, I build independent backend systems focused
+              on clean architecture, transactional correctness, and real-world
+              edge cases.
             </p>
           </div>
         </div>

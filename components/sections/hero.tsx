@@ -14,6 +14,7 @@ const item = {
     },
   },
 };
+
 const container = {
   hidden: {},
   show: { transition: { staggerChildren: 0.11 } },
@@ -22,10 +23,10 @@ const container = {
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center pt-16 overflow-hidden">
-      {/* Background */}
       <div aria-hidden className="pointer-events-none absolute inset-0">
         <div className="absolute -top-40 -right-40 w-[700px] h-[700px] rounded-full bg-[hsl(var(--primary)/0.05)] blur-3xl" />
         <div className="absolute bottom-0 -left-24 w-[450px] h-[450px] rounded-full bg-[hsl(var(--accent)/0.05)] blur-3xl" />
+
         <div
           className="absolute inset-0 opacity-[0.02]"
           style={{
@@ -45,8 +46,9 @@ export default function Hero() {
         >
           <motion.div variants={item} className="flex items-center gap-3 mb-7">
             <span className="font-mono text-xs text-[hsl(var(--accent))] tracking-widest uppercase">
-              Available for work
+              Full-Stack Engineer Intern · Periscale AI
             </span>
+
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[hsl(var(--accent))] opacity-75" />
               <span className="relative inline-flex rounded-full h-2 w-2 bg-[hsl(var(--accent))]" />
@@ -67,8 +69,9 @@ export default function Hero() {
 
           <motion.div variants={item} className="flex items-center gap-3 mb-6">
             <div className="h-px w-8 bg-[hsl(var(--accent))]" />
+
             <p className="font-mono text-sm text-[hsl(var(--muted-foreground))] tracking-wide">
-              Backend Developer · CSE Graduate
+              Full-Stack Developer · CSE Graduate
             </p>
           </motion.div>
 
@@ -78,10 +81,10 @@ export default function Hero() {
           >
             I build{" "}
             <span className="text-[hsl(var(--foreground))] font-semibold">
-              scalable backend systems
-            </span>
-            , RESTful APIs, and production-ready web applications — with a focus
-            on reliability and clean architecture.
+              production-ready systems
+            </span>{" "}
+            - from RESTful APIs and backend architecture to full-stack features
+            and AI-powered integrations.
           </motion.p>
 
           <motion.div variants={item} className="flex flex-wrap gap-3">
@@ -95,6 +98,7 @@ export default function Hero() {
             >
               <FolderOpen size={15} /> View Projects
             </button>
+
             <a
               href="/Rifah_Sajida_Deya_cv.pdf"
               download
@@ -107,13 +111,14 @@ export default function Hero() {
           <motion.div variants={item} className="mt-16 flex flex-wrap gap-10">
             {[
               ["6+", "Projects Shipped"],
-              ["4+", "Tech Stacks"],
-              ["3", "Databases"],
+              ["4", "Codebases in Production"],
+              ["3+", "Years Building"],
             ].map(([v, l]) => (
               <div key={l}>
                 <p className="text-3xl font-bold text-[hsl(var(--foreground))]">
                   {v}
                 </p>
+
                 <p className="text-xs text-[hsl(var(--muted-foreground))] font-mono mt-0.5">
                   {l}
                 </p>
@@ -132,9 +137,14 @@ export default function Hero() {
         <span className="font-mono text-[10px] tracking-widest uppercase">
           Scroll
         </span>
+
         <motion.div
           animate={{ y: [0, 6, 0] }}
-          transition={{ repeat: Infinity, duration: 1.6, ease: "easeInOut" }}
+          transition={{
+            repeat: Infinity,
+            duration: 1.6,
+            ease: "easeInOut",
+          }}
         >
           <ArrowDown size={13} />
         </motion.div>

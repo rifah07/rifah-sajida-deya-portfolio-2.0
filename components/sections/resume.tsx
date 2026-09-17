@@ -6,18 +6,20 @@ import { Section, SectionHeader } from "@/components/ui/section";
 
 const timeline = [
   {
-    icon: Briefcase, type: "work",
+    icon: Briefcase,
+    type: "work",
     title: "Full-Stack Engineer Intern",
     org: "Periscale AI",
-    period: "June 2026 – Present",
-    detail: "Working across the Django backend and React/TypeScript frontend of a SaaS platform — contributing to feature development, bug fixes, and integration work.",
+    period: "June 2026 - Present",
+    detail:
+      "Shipping production code across four codebases - Django REST backend, React/TypeScript frontend, a FastAPI + LangGraph AI agent service, and a Hono/TypeScript field-service backend. Work spans order operations, courier and social integrations, and AI features including a multilingual chatbot runtime and AI-powered order creation.",
   },
   {
     icon: GraduationCap,
     type: "edu",
     title: "B.Sc. Computer Science & Engineering",
     org: "Jagannath University, Dhaka",
-    period: "2019 – 2025",
+    period: "2019 - 2025",
     detail:
       "Algorithms, data structures, distributed systems, and software engineering fundamentals.",
   },
@@ -26,7 +28,7 @@ const timeline = [
     type: "work",
     title: "Backend Developer (Projects)",
     org: "Independent",
-    period: "2022 – Present",
+    period: "2022 - Present",
     detail:
       "Built production-grade backends: e-commerce platforms, multi-tenant APIs and financial trackers.",
   },

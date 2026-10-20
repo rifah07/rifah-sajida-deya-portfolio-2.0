@@ -46,7 +46,7 @@ export default function Hero() {
         >
           <motion.div variants={item} className="flex items-center gap-3 mb-7">
             <span className="font-mono text-xs text-[hsl(var(--accent))] tracking-widest uppercase">
-              Full-Stack Engineer Intern · Periscale AI
+              Full-Stack & AI Engineer Intern · Periscale AI
             </span>
 
             <span className="relative flex h-2 w-2">

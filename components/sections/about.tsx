@@ -40,30 +40,35 @@ export default function About() {
             <p>
               I&apos;m currently a{" "}
               <span className="text-[hsl(var(--foreground))] font-semibold">
-                Full-Stack Engineer Intern at Periscale AI
+                Full-Stack & AI Engineer Intern at Periscale AI
               </span>
-              , an AI-powered e-commerce SaaS platform built for South Asian
-              commerce. My work spans four codebases in production - a Django
-              REST backend, a React/TypeScript frontend, a FastAPI + LangGraph
-              AI agent service, and a separate Hono/TypeScript backend for a
-              field-service platform.
+              , where we build an AI sales employee for online businesses in
+              South Asia. I work on every layer of the product: the Django
+              REST backend, the React/TypeScript dashboard and the FastAPI +
+              LangGraph agent service, plus a Hono/TypeScript backend for a
+              separate field-service product.
             </p>
             <p>
-              I&apos;ve worked across the full stack: rebuilding{" "}
+              On the{" "}
               <span className="text-[hsl(var(--foreground))] font-semibold">
-                core order operations
-              </span>{" "}
-              (role-based boards, kanban, invoice lifecycle), shipping
-              end-to-end{" "}
+                AI side
+              </span>
+              , I work on the agent that chats with customers on Messenger,
+              Instagram, WhatsApp and the web in English, Bangla and Banglish.
+              I taught it to take orders, read product photos and voice notes,
+              remember returning customers and hand the chat to a person when
+              needed. A lot of my time also goes into making it fast and
+              reliable in production.
+            </p>
+            <p>
+              On the{" "}
               <span className="text-[hsl(var(--foreground))] font-semibold">
-                courier and social channel integrations
-              </span>{" "}
-              and contributing to{" "}
-              <span className="text-[hsl(var(--foreground))] font-semibold">
-                AI features
-              </span>{" "}
-              - including an AI-powered order creation flow, a multilingual
-              LangGraph chatbot runtime, and LLM cache resilience.
+                full-stack side
+              </span>
+              , I integrated three courier services, rebuilt order management
+              around how each team actually works, and shipped features like
+              discounts, delivery zones and automated follow-ups from the
+              database all the way to the UI.
             </p>
             <p>
               Outside of Periscale, I build independent backend systems focused

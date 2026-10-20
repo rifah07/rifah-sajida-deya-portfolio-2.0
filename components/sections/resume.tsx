@@ -8,11 +8,18 @@ const timeline = [
   {
     icon: Briefcase,
     type: "work",
-    title: "Full-Stack Engineer Intern",
+    title: "Full-Stack & AI Engineer Intern",
     org: "Periscale AI",
     period: "June 2026 - Present",
     detail:
-      "Shipping production code across four codebases - Django REST backend, React/TypeScript frontend, a FastAPI + LangGraph AI agent service, and a Hono/TypeScript field-service backend. Work spans order operations, courier and social integrations, and AI features including a multilingual chatbot runtime and AI-powered order creation.",
+      "Periscale gives online businesses an AI sales employee that chats with their customers. I work across the whole product: the Django backend, the React/TypeScript dashboard and the FastAPI + LangGraph agent service, plus a Hono/TypeScript backend for a field-service product.",
+    highlights: [
+      "Improved the AI sales agent that talks to customers on Messenger, Instagram, WhatsApp and the website in English, Bangla and Banglish. It now takes orders in chat, understands product photos and voice notes, and remembers returning customers",
+      "Built the human handoff flow, so the agent brings in a team member when it should and the answer still reaches the customer, even after they leave the chat",
+      "Made replies faster and more dependable with smarter caching, timeouts and retries, so messages are no longer dropped or stuck",
+      "Integrated the Carrybee, Pathao and Steadfast couriers and redesigned order management into separate call-center, processing and shipment boards",
+      "Shipped commerce features from database to UI: discounts, delivery zones, service packages, automated follow-ups and inbox analytics",
+    ],
   },
   {
     icon: GraduationCap,
@@ -107,6 +114,13 @@ export default function Resume() {
                     <p className="text-xs text-[hsl(var(--muted-foreground))] leading-relaxed">
                       {t.detail}
                     </p>
+                    {t.highlights && (
+                      <ul className="mt-2 space-y-1.5 list-disc pl-4 text-xs text-[hsl(var(--muted-foreground))] leading-relaxed">
+                        {t.highlights.map((h) => (
+                          <li key={h}>{h}</li>
+                        ))}
+                      </ul>
+                    )}
                   </div>
                 </motion.div>
               ))}

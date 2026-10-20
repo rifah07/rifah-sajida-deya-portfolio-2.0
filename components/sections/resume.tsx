@@ -8,11 +8,11 @@ const timeline = [
   {
     icon: Briefcase,
     type: "work",
-    title: "Full-Stack & AI Engineer Intern",
+    title: "Junior Full-Stack Engineer",
     org: "Periscale AI",
     period: "June 2026 - Present",
     detail:
-      "Periscale gives online businesses an AI sales employee that chats with their customers. I work across the whole product: the Django backend, the React/TypeScript dashboard and the FastAPI + LangGraph agent service, plus a Hono/TypeScript backend for a field-service product.",
+      "Periscale is an all-in-one commerce platform: orders, CRM, inventory, couriers, accounting, a social inbox, website builder, marketplace sales and AI employees that chat with customers. Joined as an intern in June 2026, promoted to Junior Full-Stack Engineer in October 2026. I build full-stack and AI features across the whole product: the Django backend, the React/TypeScript dashboard and the FastAPI + LangGraph agent service, plus a Hono/TypeScript backend for a field-service product.",
     highlights: [
       "Improved the AI sales agent that talks to customers on Messenger, Instagram, WhatsApp and the website in English, Bangla and Banglish. It now takes orders in chat, understands product photos and voice notes, and remembers returning customers",
       "Built the human handoff flow, so the agent brings in a team member when it should and the answer still reaches the customer, even after they leave the chat",

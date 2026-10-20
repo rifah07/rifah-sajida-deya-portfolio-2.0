@@ -40,10 +40,15 @@ export default function About() {
             <p>
               I&apos;m currently a{" "}
               <span className="text-[hsl(var(--foreground))] font-semibold">
-                Full-Stack & AI Engineer Intern at Periscale AI
+                Junior Full-Stack Engineer at Periscale AI
               </span>
-              , where we build an AI sales employee for online businesses in
-              South Asia. I work on every layer of the product: the Django
+              , an all-in-one commerce platform for businesses in South Asia:
+              orders, CRM, inventory, couriers, accounting, a social inbox,
+              website builder and marketplace sales, with AI employees that
+              chat with customers and sell for the business. I joined as an
+              intern in June 2026 and was promoted to Junior Full-Stack
+              Engineer in October 2026. I build full-stack and AI features on
+              every layer of the product: the Django
               REST backend, the React/TypeScript dashboard and the FastAPI +
               LangGraph agent service, plus a Hono/TypeScript backend for a
               separate field-service product.

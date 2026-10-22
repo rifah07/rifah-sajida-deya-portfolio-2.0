@@ -115,24 +115,26 @@ story = [
         ("Databases", "PostgreSQL, MySQL, MongoDB, Redis, Prisma, TypeORM, Mongoose"),
         ("AI / ML", "LangGraph, Google Gemini API, RAG, pgvector, machine learning, explainable AI"),
         ("Security", "JWT, RBAC, multi-tenant data isolation, Zod validation, Helmet, rate limiting"),
-        ("Tools", "Git, GitHub, Docker, Swagger/OpenAPI, Postman, Vercel, Render, Netlify"),
+        ("Testing &amp; Tools", "pytest, Django TestCase, Git, GitHub, Docker, Docker Compose, Swagger/OpenAPI, Postman, Vercel, Render"),
     ]],
 
     *section("Experience"),
     row("<b>Junior Full-Stack Engineer</b>", "06/2026 – Present"),
     row(f'<i>{a("https://www.periscale.ai/", "Periscale AI")} &nbsp;(joined as Intern, promoted Oct 2026)</i>', "Remote"),
     bullets([
-        "Build features across the Django REST backend, React/TypeScript dashboard and FastAPI + LangGraph agent service.",
+        "Build features across the Django REST backend, React/TypeScript dashboard and FastAPI + LangGraph agent "
+        "service, and cover backend and agent changes with pytest and Django tests.",
         "Added order taking, product photo and voice note understanding, and returning-customer memory to the AI "
         "sales agent that replies to customers on Messenger, Instagram and web chat in English, Bangla and Banglish.",
         "Built the human handoff flow so the agent passes a conversation to a staff member when it should, and the "
         "staff reply still reaches the customer after they leave the chat.",
-        "Fixed dropped and stuck AI replies in production by adding caching, timeouts and retries around LLM calls.",
-        "Integrated three courier APIs (Carrybee, Pathao, Steadfast): backend services, webhook handlers with "
-        "signature verification, and frontend forms with cascading location search.",
+        "Fixed dropped and stuck AI replies in production with caching, timeouts and retries around LLM calls, and "
+        "made message polling idempotent so no message is skipped or answered twice.",
+        "Built multi-role RBAC on a 76-permission catalog, enforced in the Django API, the agent service and the "
+        "React route guards.",
+        "Integrated three courier APIs (Carrybee, Pathao, Steadfast) with signed webhooks and cascading location search.",
         "Split the core Orders &amp; Finance page into role-specific Call Center, Processing and Shipment boards.",
         "Shipped discounts, location-based delivery charges, invoices, follow-ups and inbox analytics, DB to UI.",
-        "Wrote API documentation and Postman collections for a field-service product's Hono/TypeScript backend.",
     ]),
 
     *section("Publication"),
@@ -186,8 +188,7 @@ story = [
         ],
         "TypeScript, Node.js, Express, PostgreSQL, Prisma, React",
         [
-            'Users type "500 uber yesterday" and Gemini extracts amount, category and date; common phrases '
-            "are keyword-matched to skip the API call.",
+            'Gemini turns "500 uber yesterday" into amount, category and date; common phrases skip the API via keywords.',
             "Sends a Telegram alert when monthly spending passes the user's budget; React dashboard for charts and edits.",
         ],
     ),
@@ -199,8 +200,8 @@ story = [
         ],
         "Next.js 15, TypeScript, MongoDB, Mongoose, Gemini, Zod",
         [
-            "Customers browse, manage the cart, check out and cancel orders through chat (10 intents). Gemini only "
-            "extracts the intent; Zod validates it and the service layer acts, so the AI never touches data directly.",
+            "Shop through chat (10 intents): Gemini only extracts the intent, Zod validates it and the service layer "
+            "acts, so the AI never touches data directly.",
             "Falls back cleanly when Gemini is overloaded or returns bad JSON; JWT auth with customer and admin roles.",
         ],
     ),

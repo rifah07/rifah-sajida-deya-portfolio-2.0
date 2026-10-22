@@ -68,7 +68,6 @@ export const projects: Project[] = [
       "Full OpenAPI 3.0 Swagger documentation",
     ],
     github: {
-      frontend: "https://github.com/rifah07/shopsphere-frontend",
       backend:
         "https://github.com/rifah07/ShopSphere__A-Complete-World-for-Shopping__Backend",
     },
@@ -165,6 +164,32 @@ export const projects: Project[] = [
     },
     category: "Full Stack",
     featured: true,
+  },
+  {
+    id: "shopbot-ai-ecommerce-chatbot",
+    title: "ShopBot — AI E-Commerce Chatbot",
+    description:
+      "A storefront where customers can also shop entirely through chat. Gemini only turns messages into structured intents; Zod validates them and the service layer does the actual work, so the AI never touches business data directly.",
+    image: "/projects/shopbot.png",
+    techStack: [
+      "Next.js 15",
+      "TypeScript",
+      "MongoDB",
+      "Mongoose",
+      "Gemini AI",
+      "Zod",
+      "Tailwind CSS",
+    ],
+    features: [
+      "10 chat intents: browse, add/remove/update cart, checkout, cancel orders and request missing sizes",
+      "Falls back cleanly when Gemini is overloaded or returns malformed JSON",
+      "JWT access + refresh tokens in HTTP-only cookies, with customer and admin roles",
+      "Admin dashboard for orders and size requests; chat history saved per user",
+    ],
+    github: { frontend: "https://github.com/rifah07/ai-ecommerce-chatbot" },
+    live: { frontend: "https://ai-ecommerce-chatbot-six.vercel.app/shop" },
+    category: "Full Stack",
+    featured: false,
   },
 ];
 

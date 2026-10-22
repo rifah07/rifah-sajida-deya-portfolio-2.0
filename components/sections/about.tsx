@@ -76,6 +76,16 @@ export default function About() {
               database all the way to the UI.
             </p>
             <p>
+              On the{" "}
+              <span className="text-[hsl(var(--foreground))] font-semibold">
+                research side
+              </span>
+              , my B.Sc. thesis on finding colorectal cancer biomarkers with
+              bioinformatics, machine learning and explainable AI has been
+              accepted in IET Systems Biology (Wiley, Q2). I am a co-first
+              author.
+            </p>
+            <p>
               Outside of Periscale, I build independent backend systems focused
               on clean architecture, transactional correctness, and real-world
               edge cases.

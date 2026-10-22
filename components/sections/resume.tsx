@@ -1,7 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Download, Eye, GraduationCap, Briefcase } from "lucide-react";
+import {
+  Download,
+  Eye,
+  GraduationCap,
+  Briefcase,
+  BookOpen,
+} from "lucide-react";
 import { Section, SectionHeader } from "@/components/ui/section";
 
 const timeline = [
@@ -22,13 +28,26 @@ const timeline = [
     ],
   },
   {
+    icon: BookOpen,
+    type: "research",
+    title:
+      "Identifying Influential Biomarkers of Colorectal Cancer Using Bioinformatics and Machine Learning Approaches with Explainable AI",
+    org: "IET Systems Biology · Wiley",
+    period: "Accepted Oct 2026",
+    detail:
+      "Co-first author. My B.Sc. thesis research, combining bioinformatics analysis, machine learning and explainable AI to find the biomarkers that matter most in colorectal cancer. Open access, currently in production. DOI: 10.1049/syb2.70092",
+    highlights: [
+      "Journal indexed in SCIE, Scopus and Web of Science · Q2 · Impact Factor 1.9",
+    ],
+  },
+  {
     icon: GraduationCap,
     type: "edu",
     title: "B.Sc. Computer Science & Engineering",
     org: "Jagannath University, Dhaka",
     period: "2019 - 2025",
     detail:
-      "Algorithms, data structures, distributed systems, and software engineering fundamentals.",
+      "CGPA 3.53. Algorithms, data structures, distributed systems and software engineering, with a thesis in machine learning for cancer biomarker discovery.",
   },
   {
     icon: Briefcase,
@@ -52,7 +71,7 @@ export default function Resume() {
           <div>
             <SectionHeader
               eyebrow="Resume"
-              title="Experience & Education"
+              title="Experience, Research & Education"
               description="A snapshot of my journey. Full details are in the CV."
             />
             <div className="flex flex-wrap gap-3">
@@ -73,7 +92,7 @@ export default function Resume() {
               </a>
             </div>
             <p className="mt-5 text-xs text-[hsl(var(--muted-foreground))] font-mono">
-              PDF · Updated June 2026
+              PDF · Updated October 2026
             </p>
           </div>
 

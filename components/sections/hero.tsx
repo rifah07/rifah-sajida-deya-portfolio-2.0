@@ -71,7 +71,7 @@ export default function Hero() {
             <div className="h-px w-8 bg-[hsl(var(--accent))]" />
 
             <p className="font-mono text-sm text-[hsl(var(--muted-foreground))] tracking-wide">
-              Full-Stack Developer · CSE Graduate
+              CSE Graduate · Co-first author, IET Systems Biology
             </p>
           </motion.div>
 

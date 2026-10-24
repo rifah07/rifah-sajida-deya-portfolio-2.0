@@ -20,7 +20,7 @@ export default function Projects({ projects, showAll = false }: ProjectsProps) {
             <SectionHeader
               eyebrow="Work"
               title="Selected Projects"
-              description="Systems I've architected and shipped — backend-first, production-focused."
+              description="Systems I've architected and shipped: backend-first, production-focused."
               className="mb-0"
             />
             <Link

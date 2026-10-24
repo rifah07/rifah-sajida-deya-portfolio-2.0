@@ -14,7 +14,7 @@ export default function ProjectsPage() {
       <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
         <div className="mb-16 text-center">
           <p className="font-mono text-xs text-[hsl(var(--accent))] tracking-widest uppercase mb-3">
-            — Portfolio
+            Portfolio
           </p>
           <h1 className="text-4xl md:text-6xl font-bold text-[hsl(var(--foreground))] mb-4">
             All Projects

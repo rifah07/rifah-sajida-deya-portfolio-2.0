@@ -52,7 +52,7 @@ export function SectionHeader({
     <div className={cn("mb-14 max-w-2xl", className)}>
       {eyebrow && (
         <p className="font-mono text-xs text-[hsl(var(--accent))] tracking-widest uppercase mb-3">
-          — {eyebrow}
+          {eyebrow}
         </p>
       )}
       <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[hsl(var(--foreground))] mb-4 leading-tight">

@@ -3,7 +3,7 @@ import { Project } from "@/types/project";
 export const projects: Project[] = [
   {
     id: "hallmate",
-    title: "HallMate — Women's Hall Portal",
+    title: "HallMate: Women's Hall Portal",
     description:
       "The website and resident portal for a women's hall at Jagannath University: ten roles, from residents and house tutors to the provost, guard and dining staff, each with a dashboard for their job, plus a public site with admission, events and notices.",
     image: "/projects/hallmate.png",
@@ -27,7 +27,7 @@ export const projects: Project[] = [
   },
   {
     id: "devscript",
-    title: "DevScript — Developer Writing Platform",
+    title: "DevScript: Developer Writing Platform",
     description:
       "One NestJS API behind two branded sites: a technical magazine open to every developer and a Bangla/English poetry journal, with strict per-site data isolation.",
     image: "/projects/devscript.png",
@@ -50,7 +50,7 @@ export const projects: Project[] = [
   },
   {
     id: "shopbot-ai-ecommerce-chatbot",
-    title: "ShopBot — AI E-Commerce Chatbot",
+    title: "ShopBot: AI E-Commerce Chatbot",
     description:
       "A storefront where customers can also shop entirely through chat. Gemini only turns messages into structured intents; Zod validates them and the service layer does the actual work, so the AI never touches business data directly.",
     image: "/projects/shopbot.png",
@@ -132,7 +132,7 @@ export const projects: Project[] = [
     id: "telegram-expense-tracker-bot",
     title: "Telegram Expense Tracker Bot",
     description:
-      "A full-stack expense tracking system with a Telegram bot interface, JWT-secured REST API, and a React dashboard — featuring AI-powered natural language expense parsing via Gemini.",
+      "A full-stack expense tracking system with a Telegram bot interface, JWT-secured REST API, and a React dashboard, with AI-powered natural language expense parsing via Gemini.",
     image: "/projects/expense-tracker.png",
     techStack: [
       "Node.js",
@@ -144,7 +144,7 @@ export const projects: Project[] = [
       "React",
     ],
     features: [
-      "AI parsing via Gemini — type '500 uber ride yesterday' and it extracts amount, category, and date",
+      "AI parsing via Gemini: type '500 uber ride yesterday' and it extracts amount, category, and date",
       "JWT auth with Telegram ID - no password needed",
       "Full REST API: expenses, budgets, breakdowns by day/week/month",
       "React dashboard with doughnut chart, budget progress bar, and expense filters",

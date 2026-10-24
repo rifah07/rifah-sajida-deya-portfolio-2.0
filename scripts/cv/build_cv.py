@@ -152,44 +152,27 @@ story = [
 
     *section("Projects"),
     *project(
-        "ShopSphere, Multivendor E-Commerce Platform",
+        "HallMate, Women's Hall Portal",
         [
-            ("GitHub", f"{GH}/ShopSphere__A-Complete-World-for-Shopping__Backend"),
-            ("Live", "https://shopsphere-complete-world-for-shopping.lovable.app/"),
-            ("API Docs", "https://shopsphere-a-complete-world-for-shopping.onrender.com/api-docs"),
+            ("Live", "https://hallmate.vercel.app"),
+            ("GitHub", f"{GH}/hallmate-backend"),
         ],
-        "TypeScript, Node.js, Express, MongoDB, JWT, Puppeteer",
+        "Next.js 16, TypeScript, Express 5, PostgreSQL, Prisma, SSLCommerz",
         [
-            "Admin, seller and buyer roles with cart, wishlist, orders, coupons, refunds, reviews and "
-            "Stripe/PayPal/COD payments.",
-            "Competitor price scraper (Puppeteer, with a Cheerio fallback) that suggests prices to sellers.",
+            "Ten role dashboards; privacy enforced in the API and read-only public demo logins, both tested.",
+            "QR ID cards with a phone-camera gate scanner; renewal bills paid online, verified server to server.",
         ],
     ),
     *project(
-        "Multi-Tenant Organization Workspace API",
+        "DevScript, Developer Writing Platform",
         [
-            ("GitHub", f"{GH}/multi_tenant_organization"),
-            ("Live", "https://multi-tenant-workspace.lovable.app/"),
-            ("API Docs", "https://multi-tenant-organization-9d2r.onrender.com/api-docs"),
+            ("Live", "https://devscript-seven.vercel.app"),
+            ("GitHub", f"{GH}/devscript-api"),
         ],
-        "TypeScript, Node.js, Express, PostgreSQL, Prisma, Zod",
+        "NestJS, GraphQL, MongoDB, Next.js 16, Gemini",
         [
-            "Every query is scoped to an organization, so tenants can never see each other's projects, tasks or users.",
-            "Three roles (Platform Admin, Org Admin, Member), Swagger docs and a Postman collection.",
-        ],
-    ),
-    *project(
-        "ExpenseBot, AI Telegram Expense Tracker",
-        [
-            ("GitHub (Backend)", f"{GH}/expense-tracker-telegram-bot-backend"),
-            ("GitHub (Frontend)", f"{GH}/expense-tracker-telegram-bot-frontend"),
-            ("Live Bot", "https://t.me/ExpenseTrack_R_Bot"),
-            ("Dashboard", "https://expense-tracker-telegram-bot-fronte.vercel.app/"),
-        ],
-        "TypeScript, Node.js, Express, PostgreSQL, Prisma, React",
-        [
-            'Gemini turns "500 uber yesterday" into amount, category and date; common phrases skip the API via keywords.',
-            "Sends a Telegram alert when monthly spending passes the user's budget; React dashboard for charts and edits.",
+            "One API, two branded sites with strict isolation; rotating refresh tokens and an audit pinned by tests.",
+            "Per-user AI quotas enforced atomically in MongoDB; semantic related posts over Gemini embeddings.",
         ],
     ),
     *project(
@@ -203,6 +186,20 @@ story = [
             "Shop through chat (10 intents): Gemini only extracts the intent, Zod validates it and the service layer "
             "acts, so the AI never touches data directly.",
             "Falls back cleanly when Gemini is overloaded or returns bad JSON; JWT auth with customer and admin roles.",
+        ],
+    ),
+    *project(
+        "ShopSphere, Multivendor E-Commerce Platform",
+        [
+            ("GitHub", f"{GH}/ShopSphere__A-Complete-World-for-Shopping__Backend"),
+            ("Live", "https://shopsphere-complete-world-for-shopping.lovable.app/"),
+            ("API Docs", "https://shopsphere-a-complete-world-for-shopping.onrender.com/api-docs"),
+        ],
+        "TypeScript, Node.js, Express, MongoDB, JWT, Puppeteer",
+        [
+            "Admin, seller and buyer roles with cart, wishlist, orders, coupons, refunds, reviews and "
+            "Stripe/PayPal/COD payments.",
+            "Competitor price scraper (Puppeteer, with a Cheerio fallback) that suggests prices to sellers.",
         ],
     ),
 ]

@@ -154,23 +154,23 @@
   --ring: 130 32% 30%;
 }
 
-/* summer: painted sky blue, meadow green; primary keeps 5.9:1 on the page */
+/* summer: golden fields in the late sun; primary keeps 5.9:1 on the page */
 .summer {
-  --background: 195 45% 94%;
-  --foreground: 202 28% 16%;
-  --card: 180 20% 99%;
-  --card-foreground: 202 28% 16%;
-  --primary: 202 66% 36%;
+  --background: 40 60% 94%;
+  --foreground: 25 30% 15%;
+  --card: 40 70% 98%;
+  --card-foreground: 25 30% 15%;
+  --primary: 18 70% 36%;
   --primary-foreground: 0 0% 100%;
-  --secondary: 190 30% 88%;
-  --secondary-foreground: 202 28% 20%;
-  --muted: 190 30% 91%;
-  --muted-foreground: 200 15% 34%;
-  --accent: 100 40% 32%;
+  --secondary: 38 50% 87%;
+  --secondary-foreground: 25 30% 20%;
+  --muted: 38 50% 90%;
+  --muted-foreground: 28 20% 34%;
+  --accent: 140 35% 28%;
   --accent-foreground: 0 0% 100%;
-  --border: 195 30% 84%;
-  --input: 195 30% 84%;
-  --ring: 202 66% 36%;
+  --border: 36 35% 80%;
+  --input: 36 35% 80%;
+  --ring: 18 70% 36%;
 }
 
 /* moonlit: night sea, moonlight gold, sea-glass blue */
@@ -337,7 +337,7 @@ body {
 /* Summer: the tree sways, grass leans, seeds float (clouds share .clouds) */
 .hills .rim {
   fill: none;
-  stroke: #d9efb0;
+  stroke: #fff0c0;
   stroke-width: 3;
   opacity: 0.6;
 }

@@ -278,7 +278,7 @@ function Moonlit() {
   );
 }
 
-// Summer: a painted afternoon. Light comes from the top right, so every
+// Summer: golden fields in the late sun. Light comes from the low sun, so every
 // cloud and the tree are drawn in three passes: shade, body, highlight,
 // each nudged towards the sun. Clouds sit on a flat base, like real cumulus.
 type Puff = [x: number, y: number, r: number];
@@ -324,9 +324,9 @@ function Cumulus({
   );
   return (
     <g transform={`translate(${x} ${y}) scale(${s})`} clipPath="url(#s-flat)">
-      {pass("#b8c6e0", 0, 0, 1)}
-      {pass("#e6edf8", 8, -10, 0.9)}
-      {pass("#ffffff", 18, -22, 0.68)}
+      {pass("#d7a48f", 0, 0, 1)}
+      {pass("#f6d9c0", 8, -10, 0.9)}
+      {pass("#fff4e3", 18, -22, 0.68)}
       {/* faded as one layer, so overlapping puffs don't stack */}
       <g opacity="0.7">{pass("url(#s-belly)", 0, 0, 1)}</g>
     </g>
@@ -350,18 +350,18 @@ function Summer() {
     >
       <defs>
         <linearGradient id="s-sky" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stopColor="#3f80c4" />
-          <stop offset="0.38" stopColor="#7db6e3" />
-          <stop offset="0.62" stopColor="#c6e2ef" />
-          <stop offset="0.78" stopColor="#f3ecd4" />
+          <stop offset="0" stopColor="#5a6fa8" />
+          <stop offset="0.38" stopColor="#e9a46a" />
+          <stop offset="0.62" stopColor="#f6c978" />
+          <stop offset="0.78" stopColor="#fbe3a8" />
         </linearGradient>
         <radialGradient id="s-sun">
-          <stop offset="0" stopColor="#fff7dc" stopOpacity="0.95" />
-          <stop offset="1" stopColor="#fff7dc" stopOpacity="0" />
+          <stop offset="0" stopColor="#fff1c4" stopOpacity="0.95" />
+          <stop offset="1" stopColor="#fff1c4" stopOpacity="0" />
         </radialGradient>
         <linearGradient id="s-far" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stopColor="#9dbfd8" />
-          <stop offset="1" stopColor="#c4dbe4" />
+          <stop offset="0" stopColor="#c99a8f" />
+          <stop offset="1" stopColor="#e8bf9a" />
         </linearGradient>
         <linearGradient
           id="s-belly"
@@ -371,8 +371,8 @@ function Summer() {
           x2="0"
           y2="0"
         >
-          <stop offset="0" stopColor="#aebfdc" stopOpacity="0" />
-          <stop offset="1" stopColor="#aebfdc" />
+          <stop offset="0" stopColor="#c98e7c" stopOpacity="0" />
+          <stop offset="1" stopColor="#c98e7c" />
         </linearGradient>
         {/* everything above y=0 in a cloud's own space: its flat base */}
         <clipPath id="s-flat">
@@ -381,7 +381,8 @@ function Summer() {
       </defs>
 
       <rect width="1600" height="1000" fill="url(#s-sky)" />
-      <circle cx="1380" cy="150" r="300" fill="url(#s-sun)" />
+      <circle cx="1000" cy="560" r="420" fill="url(#s-sun)" />
+      <circle cx="1000" cy="560" r="64" fill="#fff3cf" />
 
       <g className="clouds">
         <Cumulus x={230} y={420} s={0.9} puffs={CUMULUS} />
@@ -400,7 +401,7 @@ function Summer() {
       <g className="hills">
         <path
           d="M0 640 C 240 590 460 610 700 640 S 1180 590 1600 630 V1000 H0Z"
-          fill="#a9cf8c"
+          fill="#edcf7e"
         />
         <path
           d="M0 640 C 240 590 460 610 700 640 S 1180 590 1600 630"
@@ -408,7 +409,7 @@ function Summer() {
         />
         <path
           d="M0 720 C 300 650 560 690 820 730 S 1300 660 1600 700 V1000 H0Z"
-          fill="#86bc63"
+          fill="#ddb052"
         />
         <path
           d="M0 720 C 300 650 560 690 820 730 S 1300 660 1600 700"
@@ -416,7 +417,7 @@ function Summer() {
         />
         <path
           d="M0 830 C 260 780 520 800 800 840 S 1320 790 1600 820 V1000 H0Z"
-          fill="#6aa84f"
+          fill="#c99436"
         />
         <path
           d="M0 830 C 260 780 520 800 800 840 S 1320 790 1600 820"
@@ -428,7 +429,7 @@ function Summer() {
       <path
         d="M1080 1000 C 1120 940 1020 900 1060 860 S 960 770 940 722"
         fill="none"
-        stroke="#e9dcb4"
+        stroke="#f5e6c4"
         strokeWidth="14"
         strokeLinecap="round"
         opacity="0.85"
@@ -441,7 +442,7 @@ function Summer() {
         <path d="M-48 -38 L0 -76 L48 -38Z" fill="#c4553f" />
         <path d="M-48 -38 L0 -76 L-4 -38Z" fill="#a8432f" />
         <rect x="18" y="-74" width="9" height="20" fill="#8a6e5a" />
-        <rect x="6" y="-30" width="14" height="12" fill="#5d84aa" />
+        <rect x="6" y="-30" width="14" height="12" fill="#f3c86a" />
         <rect x="-10" y="-22" width="11" height="22" fill="#7b5a43" />
       </g>
 
@@ -451,7 +452,7 @@ function Summer() {
         cy="702"
         rx="120"
         ry="16"
-        fill="#4f8a3d"
+        fill="#8a6a2a"
         opacity="0.55"
       />
       <g className="sway" style={{ transformOrigin: "1270px 700px" }}>
@@ -471,18 +472,18 @@ function Summer() {
           strokeWidth="7"
           fill="none"
         />
-        <g fill="#3f7a3a">
+        <g fill="#4d5e2a">
           <circle cx="1205" cy="540" r="62" />
           <circle cx="1270" cy="500" r="80" />
           <circle cx="1340" cy="535" r="60" />
           <circle cx="1265" cy="565" r="58" />
         </g>
-        <g fill="#589b48">
+        <g fill="#6b7a32">
           <circle cx="1214" cy="530" r="50" />
           <circle cx="1280" cy="488" r="66" />
           <circle cx="1346" cy="524" r="46" />
         </g>
-        <g fill="#7fbe5d">
+        <g fill="#a3a24a">
           <circle cx="1226" cy="516" r="30" />
           <circle cx="1296" cy="470" r="40" />
           <circle cx="1352" cy="510" r="24" />
@@ -490,13 +491,13 @@ function Summer() {
       </g>
 
       {/* grass in the foreground leans with the wind */}
-      <g className="breeze" fill="#4f9440">
+      <g className="breeze" fill="#b0812a">
         <path d="M60 1000 Q 70 940 52 900 Q 82 940 80 1000Z M96 1000 Q 108 930 128 896 Q 112 950 116 1000Z M30 1000 Q 22 950 4 925 Q 40 950 48 1000Z" />
         <path d="M1500 1000 Q 1510 930 1490 892 Q 1524 940 1522 1000Z M1540 1000 Q 1552 940 1580 905 Q 1560 955 1562 1000Z" />
       </g>
 
       {/* dandelion seeds drift across on the breeze */}
-      <g className="seeds" fill="#ffffff">
+      <g className="seeds" fill="#fff4e3">
         {seeds.map(([x, y, delay]) => (
           <circle
             key={x}

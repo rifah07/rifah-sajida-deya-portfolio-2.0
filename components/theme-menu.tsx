@@ -28,9 +28,9 @@ const THEMES = [
   {
     id: "summer",
     label: "Summer",
-    hint: "Big clouds over green hills, painted by hand",
+    hint: "Golden wheat hills in the late sun",
     swatch:
-      "linear-gradient(180deg, #7db6e3 0 40%, #f4f8fb 40% 55%, #86bc63 55%)",
+      "linear-gradient(180deg, #e9a46a 0 40%, #f6c978 40% 55%, #ddb052 55%)",
   },
   {
     id: "moonlit",

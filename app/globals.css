@@ -124,6 +124,17 @@
   --ring: 220 70% 62%;
 }
 
+/* next-themes only knows light/dark, so each theme sets its own scheme */
+.light,
+.meadow,
+.summer {
+  color-scheme: light;
+}
+.dark,
+.moonlit {
+  color-scheme: dark;
+}
+
 /* meadow: pastel hills, forest green, river teal */
 .meadow {
   --background: 85 30% 95%;
@@ -141,6 +152,25 @@
   --border: 90 20% 84%;
   --input: 90 20% 84%;
   --ring: 130 32% 30%;
+}
+
+/* summer: painted sky blue, meadow green; primary keeps 5.9:1 on the page */
+.summer {
+  --background: 195 45% 94%;
+  --foreground: 202 28% 16%;
+  --card: 180 20% 99%;
+  --card-foreground: 202 28% 16%;
+  --primary: 202 66% 36%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 190 30% 88%;
+  --secondary-foreground: 202 28% 20%;
+  --muted: 190 30% 91%;
+  --muted-foreground: 200 15% 34%;
+  --accent: 100 40% 32%;
+  --accent-foreground: 0 0% 100%;
+  --border: 195 30% 84%;
+  --input: 195 30% 84%;
+  --ring: 202 66% 36%;
 }
 
 /* moonlit: night sea, moonlight gold, sea-glass blue */
@@ -269,11 +299,13 @@ body {
   height: 100%;
 }
 .meadow .scene-meadow,
-.moonlit .scene-moonlit {
+.moonlit .scene-moonlit,
+.summer .scene-summer {
   display: block;
 }
 /* in daylight the hills are busy: a soft wash keeps the hero text calm */
-.meadow .hero-scenery::before {
+.meadow .hero-scenery::before,
+.summer .hero-scenery::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -300,6 +332,46 @@ body {
 .scene-moonlit .grain {
   opacity: 0.05;
   mix-blend-mode: screen;
+}
+
+/* Summer: the tree sways, grass leans, seeds float (clouds share .clouds) */
+.hills .rim {
+  fill: none;
+  stroke: #d9efb0;
+  stroke-width: 3;
+  opacity: 0.6;
+}
+.breeze path {
+  transform-box: fill-box;
+  transform-origin: bottom center;
+  animation: lean 5s ease-in-out infinite alternate;
+}
+.breeze path:nth-child(2) {
+  animation-duration: 6.5s;
+}
+@keyframes lean {
+  from {
+    transform: skewX(-4deg);
+  }
+  to {
+    transform: skewX(5deg);
+  }
+}
+.seeds circle {
+  opacity: 0;
+  animation: seed-drift 18s linear infinite;
+}
+@keyframes seed-drift {
+  10% {
+    opacity: 0.9;
+  }
+  85% {
+    opacity: 0.7;
+  }
+  to {
+    opacity: 0;
+    transform: translate(-260px, -140px);
+  }
 }
 
 /* Meadow: clouds drift, trees lean in the wind, the river and pond move */

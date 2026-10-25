@@ -104,7 +104,7 @@ export default function Hero() {
             <a
               href="/Rifah_Sajida_Deya_cv.pdf"
               download
-              className="inline-flex items-center gap-2 h-11 px-6 rounded-lg border border-[hsl(var(--border))] bg-transparent text-[hsl(var(--foreground))] text-sm font-medium hover:bg-[hsl(var(--muted))] transition-colors"
+              className="inline-flex items-center gap-2 h-11 px-6 rounded-lg border border-[hsl(var(--border))] bg-[hsl(var(--card)/0.7)] text-[hsl(var(--foreground))] text-sm font-medium hover:bg-[hsl(var(--muted))] transition-colors"
             >
               <Download size={15} /> Download CV
             </a>

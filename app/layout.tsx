@@ -49,8 +49,9 @@ export default function RootLayout({
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
-          themes={["light", "dark", "meadow", "moonlit"]}
+          themes={["light", "dark", "meadow", "moonlit", "summer"]}
           enableSystem
+          enableColorScheme={false}
           disableTransitionOnChange={false}
         >
           <Navbar />

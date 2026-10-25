@@ -26,6 +26,13 @@ const THEMES = [
       "linear-gradient(180deg, #dbeaf0 0 45%, #b8d4a8 45% 75%, #7fa774 75%)",
   },
   {
+    id: "summer",
+    label: "Summer",
+    hint: "Big clouds over green hills, painted by hand",
+    swatch:
+      "linear-gradient(180deg, #7db6e3 0 40%, #f4f8fb 40% 55%, #86bc63 55%)",
+  },
+  {
     id: "moonlit",
     label: "Moonlit",
     hint: "Stars, a moon and the sea at night",
@@ -75,10 +82,6 @@ export function ThemeMenu() {
     const apply = () => {
       html.classList.remove(...THEMES.map((t) => t.id));
       html.classList.add(id);
-      html.style.setProperty(
-        "color-scheme",
-        id === "light" || id === "meadow" ? "light" : "dark",
-      );
     };
     if (
       document.startViewTransition &&

@@ -1,6 +1,6 @@
 # Rifah Sajida Deya - Portfolio
 
-Personal portfolio website built with Next.js 16, TypeScript, Tailwind CSS v4, and Framer Motion, with four themes: two of them hand-drawn landscapes.
+Personal portfolio website built with Next.js 16, TypeScript, Tailwind CSS v4, and Framer Motion, with five themes: three of them hand-drawn landscapes.
 
 🌐 **Live:** [rifah-sajida-deya-portfolio.vercel.app](https://rifah-sajida-deya-portfolio.vercel.app/)
 

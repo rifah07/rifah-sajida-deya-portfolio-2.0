@@ -1,12 +1,14 @@
 @import "tailwindcss";
 
-@custom-variant dark (&:where(.dark, .dark *));
+/* Moonlit is a dark theme too, so dark: utilities apply to it */
+@custom-variant dark (&:where(.dark, .dark *, .moonlit, .moonlit *));
 
 @theme {
   /* Fonts */
-  --font-display: var(--font-display-var), serif;
-  --font-body: var(--font-body-var), sans-serif;
-  --font-mono: var(--font-mono-var), monospace;
+  --font-sans: var(--font-geist-sans), system-ui, sans-serif;
+  --font-display: var(--font-geist-sans), system-ui, sans-serif;
+  --font-body: var(--font-geist-sans), system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
 
   /* Border radius */
   --radius: 0.75rem;
@@ -14,22 +16,23 @@
   --border-radius-md: calc(var(--radius) - 2px);
   --border-radius-sm: calc(var(--radius) - 4px);
 
-  /* Colors — light mode defaults */
-  --color-background: hsl(35 20% 97%);
-  --color-foreground: hsl(220 20% 10%);
-  --color-card: hsl(0 0% 100%);
-  --color-card-foreground: hsl(220 20% 10%);
-  --color-primary: hsl(220 70% 50%);
-  --color-primary-foreground: hsl(0 0% 100%);
-  --color-secondary: hsl(35 30% 90%);
-  --color-secondary-foreground: hsl(220 20% 20%);
-  --color-muted: hsl(35 15% 93%);
-  --color-muted-foreground: hsl(220 10% 50%);
-  --color-accent: hsl(168 60% 42%);
-  --color-accent-foreground: hsl(0 0% 100%);
-  --color-border: hsl(35 15% 88%);
-  --color-input: hsl(35 15% 88%);
-  --color-ring: hsl(220 70% 50%);
+  /* Colours come from each theme's raw HSL channels below, so components can
+     write hsl(var(--primary) / 0.3) and Tailwind can write bg-primary/30 */
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
 
   /* Animations */
   --animate-fade-in: fadeIn 0.6s ease forwards;
@@ -82,23 +85,81 @@
   }
 }
 
-/* Dark mode overrides */
+/* Themes: raw HSL channels. next-themes puts the class on <html> */
+/* light (default) */
+:root {
+  --background: 35 20% 97%;
+  --foreground: 220 20% 10%;
+  --card: 0 0% 100%;
+  --card-foreground: 220 20% 10%;
+  --primary: 220 70% 50%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 35 30% 90%;
+  --secondary-foreground: 220 20% 20%;
+  --muted: 35 15% 93%;
+  --muted-foreground: 220 10% 42%;
+  --accent: 168 60% 30%;
+  --accent-foreground: 0 0% 100%;
+  --border: 35 15% 88%;
+  --input: 35 15% 88%;
+  --ring: 220 70% 50%;
+}
+
+/* dark */
 .dark {
-  --color-background: hsl(222 20% 8%);
-  --color-foreground: hsl(210 20% 95%);
-  --color-card: hsl(222 18% 11%);
-  --color-card-foreground: hsl(210 20% 95%);
-  --color-primary: hsl(220 70% 62%);
-  --color-primary-foreground: hsl(220 20% 8%);
-  --color-secondary: hsl(222 15% 16%);
-  --color-secondary-foreground: hsl(210 20% 85%);
-  --color-muted: hsl(222 15% 14%);
-  --color-muted-foreground: hsl(210 10% 55%);
-  --color-accent: hsl(168 55% 50%);
-  --color-accent-foreground: hsl(222 20% 8%);
-  --color-border: hsl(222 15% 18%);
-  --color-input: hsl(222 15% 16%);
-  --color-ring: hsl(220 70% 62%);
+  --background: 222 20% 8%;
+  --foreground: 210 20% 95%;
+  --card: 222 18% 11%;
+  --card-foreground: 210 20% 95%;
+  --primary: 220 70% 62%;
+  --primary-foreground: 220 20% 8%;
+  --secondary: 222 15% 16%;
+  --secondary-foreground: 210 20% 85%;
+  --muted: 222 15% 14%;
+  --muted-foreground: 210 10% 60%;
+  --accent: 168 55% 50%;
+  --accent-foreground: 222 20% 8%;
+  --border: 222 15% 18%;
+  --input: 222 15% 16%;
+  --ring: 220 70% 62%;
+}
+
+/* meadow: pastel hills, forest green, river teal */
+.meadow {
+  --background: 85 30% 95%;
+  --foreground: 120 20% 14%;
+  --card: 80 40% 98%;
+  --card-foreground: 120 20% 14%;
+  --primary: 130 32% 30%;
+  --primary-foreground: 80 40% 98%;
+  --secondary: 90 25% 88%;
+  --secondary-foreground: 120 20% 20%;
+  --muted: 90 25% 91%;
+  --muted-foreground: 110 12% 34%;
+  --accent: 195 50% 30%;
+  --accent-foreground: 0 0% 100%;
+  --border: 90 20% 84%;
+  --input: 90 20% 84%;
+  --ring: 130 32% 30%;
+}
+
+/* moonlit: night sea, moonlight gold, sea-glass blue */
+.moonlit {
+  --background: 226 60% 8%;
+  --foreground: 220 40% 94%;
+  --card: 226 50% 12%;
+  --card-foreground: 220 40% 94%;
+  --primary: 45 85% 72%;
+  --primary-foreground: 226 60% 9%;
+  --secondary: 226 40% 18%;
+  --secondary-foreground: 220 30% 85%;
+  --muted: 226 40% 15%;
+  --muted-foreground: 222 25% 72%;
+  --accent: 195 70% 66%;
+  --accent-foreground: 226 60% 9%;
+  --border: 226 35% 20%;
+  --input: 226 35% 18%;
+  --ring: 45 85% 72%;
 }
 
 /* Base resets */
@@ -114,6 +175,7 @@ html {
 body {
   background-color: var(--color-background);
   color: var(--color-foreground);
+  font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -194,4 +256,250 @@ body {
       var(--color-muted) 75%);
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite;
+}
+
+/* ── Hero scenery for the Meadow and Moonlit themes ── */
+.hero-scenery {
+  position: absolute;
+  inset: 0;
+}
+.hero-scenery .scene {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+.meadow .scene-meadow,
+.moonlit .scene-moonlit {
+  display: block;
+}
+/* in daylight the hills are busy: a soft wash keeps the hero text calm */
+.meadow .hero-scenery::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--color-background) 78%, transparent) 0%,
+    color-mix(in srgb, var(--color-background) 45%, transparent) 45%,
+    transparent 70%
+  );
+}
+/* melt the landscape into the page so the next section starts cleanly */
+.hero-scenery::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 30%;
+  background: linear-gradient(transparent, var(--color-background));
+}
+.grain {
+  opacity: 0.07;
+  mix-blend-mode: multiply;
+}
+.scene-moonlit .grain {
+  opacity: 0.05;
+  mix-blend-mode: screen;
+}
+
+/* Meadow: clouds drift, trees lean in the wind, the river and pond move */
+.clouds {
+  animation: drift 120s linear infinite alternate;
+}
+@keyframes drift {
+  to {
+    transform: translateX(-160px);
+  }
+}
+.sway {
+  animation: sway 7s ease-in-out infinite alternate;
+}
+.sway:nth-child(2n) {
+  animation-duration: 9s;
+}
+@keyframes sway {
+  from {
+    transform: rotate(-1.2deg);
+  }
+  to {
+    transform: rotate(1.4deg);
+  }
+}
+.shimmer {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-dasharray: 18 34;
+  opacity: 0.7;
+  animation: flow 6s linear infinite;
+}
+@keyframes flow {
+  to {
+    stroke-dashoffset: -104;
+  }
+}
+.ripples ellipse {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 1.5;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: ripple 5s ease-out infinite;
+}
+.ripples ellipse:nth-child(2) {
+  animation-delay: 2.5s;
+}
+@keyframes ripple {
+  from {
+    transform: scale(0.3);
+    opacity: 0.9;
+  }
+  to {
+    transform: scale(2.6);
+    opacity: 0;
+  }
+}
+
+/* Moonlit: stars breathe, the moon glows, light trembles on the water */
+.stars circle {
+  animation: twinkle 4s ease-in-out infinite alternate;
+}
+@keyframes twinkle {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.25;
+  }
+}
+.moon-glow {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: glow 8s ease-in-out infinite alternate;
+}
+@keyframes glow {
+  to {
+    transform: scale(1.12);
+    opacity: 0.7;
+  }
+}
+.moonpath line {
+  opacity: 0.55;
+  animation: glint 3s ease-in-out infinite alternate;
+}
+@keyframes glint {
+  to {
+    opacity: 0.12;
+  }
+}
+.waves path {
+  animation: swell 14s linear infinite;
+}
+.waves path:nth-child(2) {
+  animation-duration: 18s;
+  animation-direction: reverse;
+}
+@keyframes swell {
+  to {
+    transform: translateX(200px);
+  }
+}
+.shooting-star {
+  stroke: #ffffff;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-dasharray: 0 160;
+  animation: shoot 13s ease-in infinite 4s;
+}
+@keyframes shoot {
+  0%,
+  92% {
+    stroke-dasharray: 0 160;
+    stroke-dashoffset: 0;
+  }
+  96% {
+    stroke-dasharray: 70 160;
+  }
+  100% {
+    stroke-dasharray: 0 160;
+    stroke-dashoffset: -160;
+  }
+}
+
+/* The new theme grows out of the spot you clicked (View Transitions) */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+::view-transition-new(root) {
+  animation: reveal 900ms cubic-bezier(0.65, 0, 0.25, 1);
+}
+@keyframes reveal {
+  from {
+    clip-path: circle(0 at var(--reveal-x, 50%) var(--reveal-y, 0));
+  }
+  to {
+    clip-path: circle(150vmax at var(--reveal-x, 50%) var(--reveal-y, 0));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-scenery * {
+    animation: none !important;
+  }
+}
+
+/* Tooltip from the element's aria-label, on hover and keyboard focus */
+.tip {
+  position: relative;
+}
+.tip::after {
+  content: attr(aria-label);
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  padding: 0.3rem 0.6rem;
+  border-radius: 8px;
+  background: var(--color-foreground);
+  color: var(--color-background);
+  font-size: 0.75rem;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: opacity 0.16s ease, transform 0.16s ease;
+}
+.tip:hover::after,
+.tip:focus-visible::after {
+  opacity: 1;
+  transform: none;
+}
+.tip-off::after {
+  display: none;
+}
+
+
+/* Project cards: a soft light follows the pointer (set in project-card.tsx) */
+.spotlight {
+  position: relative;
+  isolation: isolate;
+}
+.spotlight::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: radial-gradient(
+    420px circle at var(--mx, 50%) var(--my, 0%),
+    color-mix(in srgb, var(--color-primary) 12%, transparent),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.spotlight:hover::before {
+  opacity: 1;
 }

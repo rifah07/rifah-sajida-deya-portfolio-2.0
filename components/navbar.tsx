@@ -1,19 +1,11 @@
 "use client";
 
-import { useState, useEffect, useSyncExternalStore } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
-import { useTheme } from "next-themes";
-import { Moon, Sun, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
-
-// Proper SSR-safe mounted check - no useEffect needed
-const useMounted = () =>
-  useSyncExternalStore(
-    () => () => {},
-    () => true,
-    () => false,
-  );
+import { ThemeMenu } from "@/components/theme-menu";
 
 const navLinks = [
   { label: "About", href: "/#about" },
@@ -24,8 +16,6 @@ const navLinks = [
 ];
 
 export default function Navbar() {
-  const { theme, setTheme } = useTheme();
-  const mounted = useMounted(); // ← replaces useState + useEffect
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -69,26 +59,7 @@ export default function Navbar() {
         </ul>
 
         <div className="flex items-center gap-2">
-          {mounted && (
-            <button
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              className="p-2 rounded-lg hover:bg-[hsl(var(--muted))] transition-colors text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--foreground))]"
-              aria-label="Toggle theme"
-            >
-              <AnimatePresence mode="wait" initial={false}>
-                <motion.span
-                  key={theme}
-                  initial={{ rotate: -90, opacity: 0 }}
-                  animate={{ rotate: 0, opacity: 1 }}
-                  exit={{ rotate: 90, opacity: 0 }}
-                  transition={{ duration: 0.2 }}
-                  className="block"
-                >
-                  {theme === "dark" ? <Sun size={17} /> : <Moon size={17} />}
-                </motion.span>
-              </AnimatePresence>
-            </button>
-          )}
+          <ThemeMenu />
           <button
             className="md:hidden p-2 rounded-lg hover:bg-[hsl(var(--muted))] transition-colors"
             onClick={() => setOpen(!open)}

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowDown, Download, FolderOpen } from "lucide-react";
+import { HeroScenery } from "@/components/ui/hero-scenery";
 
 const item = {
   hidden: { opacity: 0, y: 22 },
@@ -24,6 +25,7 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center pt-16 overflow-hidden">
       <div aria-hidden className="pointer-events-none absolute inset-0">
+        <HeroScenery />
         <div className="absolute -top-40 -right-40 w-[700px] h-[700px] rounded-full bg-[hsl(var(--primary)/0.05)] blur-3xl" />
         <div className="absolute bottom-0 -left-24 w-[450px] h-[450px] rounded-full bg-[hsl(var(--accent)/0.05)] blur-3xl" />
 

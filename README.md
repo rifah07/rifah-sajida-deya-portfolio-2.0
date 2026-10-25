@@ -1,8 +1,12 @@
 # Rifah Sajida Deya - Portfolio
 
-Personal portfolio website built with Next.js 15, TypeScript, Tailwind CSS v4, and Framer Motion.
+Personal portfolio website built with Next.js 16, TypeScript, Tailwind CSS v4, and Framer Motion, with four themes: two of them hand-drawn landscapes.
 
-🌐 **Live:** [rifah-sajida-deya-portfolio-2-0.vercel.app](https://rifah-sajida-deya-portfolio.vercel.app/)
+🌐 **Live:** [rifah-sajida-deya-portfolio.vercel.app](https://rifah-sajida-deya-portfolio.vercel.app/)
+
+[![Portfolio tour: the Meadow and Moonlit themes, the featured project and the project filters](docs/demo.gif)](docs/demo.mp4)
+
+▶ **[Watch the 45-second demo with captions](docs/demo.mp4)**
 
 ---
 
@@ -10,11 +14,11 @@ Personal portfolio website built with Next.js 15, TypeScript, Tailwind CSS v4, a
 
 | Category   | Technology                          |
 | ---------- | ----------------------------------- |
-| Framework  | Next.js 15 (App Router)             |
+| Framework  | Next.js 16 (App Router)             |
 | Language   | TypeScript                          |
 | Styling    | Tailwind CSS v4                     |
 | Animations | Framer Motion                       |
-| Theme      | next-themes (dark/light, persisted) |
+| Theme      | next-themes: Midnight, Daylight, Meadow, Moonlit |
 | Forms      | react-hook-form + Zod               |
 | Email      | Resend                              |
 | Deployment | Vercel                              |

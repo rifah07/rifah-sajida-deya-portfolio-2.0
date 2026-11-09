@@ -16,13 +16,13 @@ const timeline = [
     type: "work",
     title: "Junior Full-Stack Engineer",
     org: "Periscale AI",
-    period: "June 2026 - Present",
+    period: "June 2026 - October 2026",
     detail:
-      "Periscale is an all-in-one commerce platform: orders, CRM, inventory, couriers, accounting, a social inbox, website builder, marketplace sales and AI employees that chat with customers. Joined as an intern in June 2026, promoted to Junior Full-Stack Engineer in October 2026. I build full-stack and AI features across the whole product: the Django backend, the React/TypeScript dashboard and the FastAPI + LangGraph agent service, plus a Hono/TypeScript backend for a field-service product.",
+      "Periscale is an all-in-one commerce platform: orders, CRM, inventory, couriers, accounting, a social inbox, website builder, marketplace sales and AI employees that chat with customers. Joined as an intern in June 2026, promoted to Junior Full-Stack Engineer in October 2026. I built full-stack and AI features across the whole product: the Django backend, the React/TypeScript dashboard and the FastAPI + LangGraph agent service, plus a Hono/TypeScript backend for a field-service product.",
     highlights: [
-      "Improved the AI sales agent that talks to customers on Messenger, Instagram, WhatsApp and the website in English, Bangla and Banglish. It now takes orders in chat, understands product photos and voice notes, and remembers returning customers",
+      "Improved the AI sales agent that talks to customers on Messenger, Instagram, WhatsApp and the website in English, Bangla and Banglish. It could take orders in chat, understand product photos and voice notes, and remember returning customers",
       "Built the human handoff flow, so the agent brings in a team member when it should and the answer still reaches the customer, even after they leave the chat",
-      "Made replies faster and more dependable with smarter caching, timeouts and retries, so messages are no longer dropped or stuck",
+      "Made replies faster and more dependable with smarter caching, timeouts and retries, so messages stopped being dropped or stuck",
       "Integrated the Carrybee, Pathao and Steadfast couriers and redesigned order management into separate call-center, processing and shipment boards",
       "Shipped commerce features from database to UI: discounts, delivery zones, service packages, automated follow-ups and inbox analytics",
     ],
@@ -92,7 +92,7 @@ export default function Resume() {
               </a>
             </div>
             <p className="mt-5 text-xs text-[hsl(var(--muted-foreground))] font-mono">
-              PDF · Updated October 2026
+              PDF · Updated November 2026
             </p>
           </div>
 

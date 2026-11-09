@@ -38,18 +38,18 @@ export default function About() {
           />
           <div className="space-y-4 text-[hsl(var(--muted-foreground))] leading-relaxed">
             <p>
-              I&apos;m currently a{" "}
+              I was a{" "}
               <span className="text-[hsl(var(--foreground))] font-semibold">
                 Junior Full-Stack Engineer at Periscale AI
-              </span>
-              , an all-in-one commerce platform for businesses in South Asia:
-              orders, CRM, inventory, couriers, accounting, a social inbox,
-              website builder and marketplace sales, with AI employees that
-              chat with customers and sell for the business. I joined as an
-              intern in June 2026 and was promoted to Junior Full-Stack
-              Engineer in October 2026. I build full-stack and AI features on
-              every layer of the product: the Django
-              REST backend, the React/TypeScript dashboard and the FastAPI +
+              </span>{" "}
+              (June to October 2026), an all-in-one commerce platform for
+              businesses in South Asia: orders, CRM, inventory, couriers,
+              accounting, a social inbox, website builder and marketplace sales,
+              with AI employees that chat with customers and sell for the
+              business. I joined as an intern in June 2026 and was promoted to
+              Junior Full-Stack Engineer in October 2026. I built full-stack and
+              AI features on every layer of the product: the Django REST
+              backend, the React/TypeScript dashboard and the FastAPI +
               LangGraph agent service, plus a Hono/TypeScript backend for a
               separate field-service product.
             </p>
@@ -58,11 +58,11 @@ export default function About() {
               <span className="text-[hsl(var(--foreground))] font-semibold">
                 AI side
               </span>
-              , I work on the agent that chats with customers on Messenger,
-              Instagram, WhatsApp and the web in English, Bangla and Banglish.
-              I taught it to take orders, read product photos and voice notes,
+              , I worked on the agent that chats with customers on Messenger,
+              Instagram, WhatsApp and the web in English, Bangla and Banglish. I
+              taught it to take orders, read product photos and voice notes,
               remember returning customers and hand the chat to a person when
-              needed. A lot of my time also goes into making it fast and
+              needed. A lot of my time also went into making it fast and
               reliable in production.
             </p>
             <p>
@@ -86,9 +86,10 @@ export default function About() {
               author.
             </p>
             <p>
-              Outside of Periscale, I build independent backend systems focused
+              Alongside Periscale, I built independent backend systems focused
               on clean architecture, transactional correctness, and real-world
-              edge cases.
+              edge cases. I&apos;m now looking for my next full-stack or backend
+              role.
             </p>
           </div>
         </div>
